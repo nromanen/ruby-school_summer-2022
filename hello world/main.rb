@@ -28,18 +28,19 @@ while conf != 0
     while conf1 != 0
       puts "Enter number (1 -- Create string, 2 -- Interpolation, 3 -- Concatenation, 4 -- Accessing, 5 -- Useful methods, 0 -- exit)"
       conf1 = gets.chomp.to_i
-      case conf1
+      strings = Strings.new
 
+      case conf1
       when 1
-        puts get_string_to_output(Strings.new.get_create_string_list)
+        puts get_string_to_output(strings.get_create_string_list)
       when 2
-        puts get_string_to_output(Strings.new.get_interpolation_list)
+        puts get_string_to_output(strings.get_interpolation_list)
       when 3
-        puts get_string_to_output(Strings.new.get_concatenation_list)
+        puts get_string_to_output(strings.get_concatenation_list)
       when 4
-        puts get_string_to_output(Strings.new.get_accessing_list)
+        puts get_string_to_output(strings.get_accessing_list)
       when 5
-        puts get_string_to_output(Strings.new.get_useful_methods_list)
+        puts get_string_to_output(strings.get_useful_methods_list)
       when 0
         nil
       else
