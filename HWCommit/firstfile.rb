@@ -1,1 +1,0 @@
-puts "...::: Ruby :::...\n| Jet Brains IDE \n| Best Experience with \"RubyMine\"\n| Stay tuned\n--- Endblock ---\n"
