@@ -20,7 +20,4 @@ end
 
 line = gets.to_s
 
-puts capital_letter_index(line) + '_' +
-       lowercase_letter_index(line) + '_' +
-       number_index(line) + '_' +
-       special_character_index(line)
+puts "#{capital_letter_index(line)}_#{lowercase_letter_index(line)}_#{number_index(line)}_#{special_character_index(line)}"
