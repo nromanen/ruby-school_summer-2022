@@ -1,4 +1,4 @@
-require './hello world/everything'
+require './hello world/everything.rb'
 require './hello world/numbers.rb'
 require './hello world/strings.rb'
 
@@ -18,7 +18,7 @@ while conf != 0
   conf = gets.chomp.to_i
   case conf
   when 1
-    puts 'Hello word'
+    puts 'Hello world'
   when 2
     puts get_string_to_output Everything.new.get
   when 3
