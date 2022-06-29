@@ -5,7 +5,7 @@ require './hello world/strings.rb'
 def get_string_to_output(list_string)
   final_string = ''
   list_string.each { |x|
-    final_string = final_string + "\t" + x[0] + "  =>  " + x[1] + "\n\n"
+    final_string = "#{final_string}\t#{x[0]} => #{x[1]}\n\n"
   }
   final_string
 end
