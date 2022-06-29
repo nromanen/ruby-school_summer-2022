@@ -18,6 +18,8 @@ end
 
 #-----------------------#
 
-line = gets.to_s
+line_1 = "#####"
+line_2 = "abc1"
 
-puts "#{capital_letter_index(line)}_#{lowercase_letter_index(line)}_#{number_index(line)}_#{special_character_index(line)}"
+puts "#{capital_letter_index(line_1)}_#{lowercase_letter_index(line_1)}_#{number_index(line_1)}_#{special_character_index(line_1)}"
+puts "#{capital_letter_index(line_2)}_#{lowercase_letter_index(line_2)}_#{number_index(line_2)}_#{special_character_index(line_2)}"
