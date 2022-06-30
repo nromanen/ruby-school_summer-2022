@@ -1,10 +1,10 @@
 class Index
   def self.uppercase_index(string)
-    string =~ /\p{Upper}/
+    string =~ /[A-Z]/
   end
 
   def self.lowercase_index(string)
-    string =~ /\p{Lower}/
+    string =~ /[a-z]/
   end
 
   def self.digit_index(string)
