@@ -13,7 +13,7 @@ def number(str)
 end;
 
 def symbol(str)
-    str =~ /\W/
+    str =~ /[\[ \] \\ \/ \^ \$ \. \| \? \* \+ \( \) \{ \} \#]/
 end;
 
 puts "text example : #{bigLetter(text)}_#{smallLetter(text)}_#{number(text)}_#{symbol(text)}";
