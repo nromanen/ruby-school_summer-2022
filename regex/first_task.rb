@@ -11,7 +11,7 @@ def contains_number(str)
 end
 
 def contains_special_character(str)
-  str =~ /\W/
+  str =~ /[^[:alnum:]]/
 end
 
 def do_regex(str)
@@ -19,4 +19,3 @@ def do_regex(str)
 end
 
 do_regex('abc1')
-do_regex('#####')
