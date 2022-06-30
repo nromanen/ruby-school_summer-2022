@@ -1,5 +1,5 @@
 def check_name(str)
-  print(str =~ /^(\p{Lu})(\p{Ll}{1,14})?((-)((\p{Lu})(\p{Ll}{1,14})?))?$/)
+  print(str =~ /^\p{Lu}\p{Ll}{0,14}(-\p{Lu}\p{Ll}{0,14})?$/)
 end
 
 check_name('Oleksandr')
