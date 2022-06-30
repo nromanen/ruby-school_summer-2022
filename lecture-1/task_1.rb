@@ -25,6 +25,6 @@ puts "\n"
 print_array get_start_ids_of_matches(/[\d]/,string)
 puts "\n"
 
-print_array get_start_ids_of_matches(/[^A-Za-z0-9 ]/,string)
+print_array get_start_ids_of_matches(/[^A-Za-z0-9 ]{1,10}/,string)
 puts "\n"
 
