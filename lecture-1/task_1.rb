@@ -13,13 +13,13 @@ def print_array (arr)
   puts "\n"
 end
 
-conf = 1
 while true
   puts 'Enter number (1 -- enter own string, 2 -- use pre-installed string,  0 -- exit)'
   conf = gets.chomp.to_i
 
   case conf
   when 1
+    print 'Enter your string: '
     string = gets
   when 2
     string = ')($T$h$!i^s Ruby style guide recommends (#323$1!2) best practices so that real-world Ruby programmers (#323$1!2) can write code that can be maintained (#323$1!2) by other real-world Ruby programmers. A style guide that reflects (#323$1!2) real-world usage gets used, while a style guide that holds to an ideal that has been (#323$1!2) rejected by the people it is 24supposed to help risks not getting used at 2all - no matter how good it is.'
