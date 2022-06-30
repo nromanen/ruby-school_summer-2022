@@ -17,7 +17,6 @@ def ip_address?(str)
 
  Line = Struct.new(:name)
 LOG_FORMAT = /([A-Za-z]+-.[A-Za-z]+)/
-#if "Bo58b-Shm7arly".match(/[A-Za-z]+-[A-Za-z]+/^\d/)
 print "\n \n \n true \n \n"
 #end
 #
@@ -46,6 +45,3 @@ for i in stlt
     print i, " format: false \n"
   end  
 end
-
-##
-#puts "Do you like cats?".match(/you/)
