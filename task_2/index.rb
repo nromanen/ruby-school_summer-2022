@@ -12,7 +12,7 @@ class Index
   end
 
   def self.symbol_index(string)
-    string =~ /[^\w\d]/
+    string =~ /[^\p{L}\p{N}]/
   end
 
   def self.task(string)

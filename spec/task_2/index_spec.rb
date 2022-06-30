@@ -33,6 +33,7 @@ describe 'symbol_index' do
     expect(Index.symbol_index('44?44')).to eql(2)
     expect(Index.symbol_index('')).to eql(nil)
     expect(Index.symbol_index('AAA')).to eql(nil)
+    expect(Index.symbol_index('Я')).to eql(nil)
   end
 end
 
