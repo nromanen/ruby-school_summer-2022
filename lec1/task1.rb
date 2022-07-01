@@ -11,19 +11,13 @@ def is_number(str)
 end
 
 def is_symbol(str)
-  str =~ /\W/
+  str =~ /[^\p{L}\p{N}]/
 end
 
-puts "#{is_uppercase('abc1')}" + '_' +
-       "#{is_lowercase('abc1')}" + '_' +
-       "#{is_number('abc1')}" + '_' +
-       "#{is_symbol('abc1')}"
-
 def interpolate(str)
-  puts "#{is_uppercase(str)}" + '_' +
-         "#{is_lowercase(str)}" + '_' +
-         "#{is_number(str)}" + '_' +
-         "#{is_symbol(str)}"
+  puts "#{is_uppercase(str)}_#{is_lowercase(str)}_#{is_number(str)}_#{is_symbol(str)}"
 end
 
 interpolate('#####')
+interpolate('abc1')
+interpolate('abcЯ1')
