@@ -1,7 +1,5 @@
 def square_sum(numbers)
-  res = 0
-  numbers.each{ |elem| res += elem**2 }
-  res
+  numbers.inject(0){ |sum, elem| sum + elem**2 }
 end
 
 p square_sum([1, 2]) # expected 5
