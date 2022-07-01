@@ -1,6 +1,5 @@
 def powers_of_two(n)
-  res = Array.new(n + 1)
-  res.each_index{ | index| res[index] = 2**index}
+  Array.new(n + 1).map.with_index{ | _,index| 2**index }
 end
 
 p powers_of_two(0) # expected [1]
