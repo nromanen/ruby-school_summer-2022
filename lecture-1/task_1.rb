@@ -43,7 +43,7 @@ while true
       print_array get_start_ids_of_matches(/[\d]/,string)
       puts "\n"
     when 4
-      print_array get_start_ids_of_matches(/[^A-Za-z0-9А-ЯҐЄІЇЎа-яґєіїў ]{1,10}/,string)
+      print_array get_start_ids_of_matches(/[^\p{L}\s]{1,10}/,string)
       puts "\n"
     when 0
       break
