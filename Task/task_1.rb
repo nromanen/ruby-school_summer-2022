@@ -13,7 +13,7 @@ def big_letters (str)
   end
   
   def special_symbols (str)
-    srt =~ /\W/
+    str =~ /[^\p{L}\p{N}]/
   end
 
   word_1 = ('abc1')
