@@ -1,6 +1,7 @@
-num=2
+def powers_of_two(n)
 array=[]
-for i in 0..num do
-    array[i]=num ** i
-    print "n = ", i,"  ==>  ", array, "\n"
+    for i in 0..n do
+        array[i]=2 ** i
+    end
+return array
 end
