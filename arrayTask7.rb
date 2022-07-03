@@ -1,17 +1,11 @@
-def arrayBuilder(num, *array)
+def alternate(num, first, second)
     res=[]
-    i=0
-while i<num do
-    print "for i: ", i, "\n"
-for e in array do
-    print "for e: ",i," ", e, "\n"
-    if i<num 
-        res.append(e)
+    for i in 0..num-1 do
+        if i%2==0 
+            res.append(first)
+          else
+          res.append(second)
+        end
     end
-    i+=1
+return res 
 end
-end
-return res
-end
-
-print arrayBuilder(5, true, false)
