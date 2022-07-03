@@ -1,6 +1,6 @@
 require_relative '../../task_3/task_4'
 
-describe('gps') do
+describe('GPS') do
   it('should return the maximum average speed per hour obtained on the sections of x') do
     expect(gps(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61])).to eql(41)
     expect(gps(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25])).to eql(219)

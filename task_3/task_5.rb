@@ -1,7 +1,5 @@
 def number(lines)
-  new_lines = []
-  (0...lines.length).each do |i|
-    new_lines.push "#{i + 1}: #{lines[i]}"
+  (0...lines.length).map do |value|
+    "#{value + 1}: #{lines[value]}"
   end
-  new_lines
 end
