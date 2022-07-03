@@ -3,8 +3,7 @@ def sayHello(array, state, city)
     for i in array do
         res+=" "+i
     end
-    res+="! Welcome to #{state}, #{city}!\n"
-    print res
+    res+="! Welcome to #{city}, #{state}!"
+    return res
 end
 
-sayHello(['John', 'Smith'], 'Phoenix', 'Arizona')
