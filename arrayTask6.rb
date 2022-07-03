@@ -1,4 +1,4 @@
-def sqrArray(array)
+def square_or_square_root(array)
     result=[]
     for i in array do
         if Math.sqrt(i)%1==0 
@@ -7,8 +7,5 @@ def sqrArray(array)
         result.append(i**2)
     end
     end
-    return result 
+    return result
 end
-
-array=[4,3,9,7,2,1]
-print array,"->",sqrArray(array)
