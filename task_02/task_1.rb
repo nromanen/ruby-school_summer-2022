@@ -8,12 +8,13 @@ def powers_of_two(n)
 
         (0..n).each do |num|
             #array.append "2^#{2**num}" # => ["2^1", "2^2", "2^4"]
-            array.append 2**num
+            array.append 2**num 
         end
         
-        p array
-
     end
+
+    return array
+
 end
   
 powers_of_two(0)
