@@ -1,8 +1,7 @@
 module Inventory
   def warehouse(array)
     sold = Hash.new
-    copy = array[0 .. array.length]
-    copy.map{ |elem| elem.scan(/\w+/) }
+    array.map{ |elem| elem.scan(/\w+/) }
         .map{ |elem| [elem[0].to_sym, elem[1].to_i] }
         .each{
           |elem|
