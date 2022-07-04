@@ -1,5 +1,5 @@
 module Inventory
-  def self.warehouse(array)
+  def warehouse(array)
     result = {}
     array.each do |value|
       product, amount = value.split(/ *- */)
