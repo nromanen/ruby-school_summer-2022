@@ -1,5 +1,5 @@
 require 'test/unit'
-require './inventory'
+require_relative 'inventory'
 
 
 class InventoryTest < Test::Unit::TestCase
