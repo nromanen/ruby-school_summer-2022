@@ -1,6 +1,5 @@
-def strEdit(array)
-for i in 0..array.length()-1 do
-    array[i].prepend("#{i+1}: ")
-end
-return array
+def number array
+  result=[]
+  array.length().times{|i|result.push("#{i+1}: #{array[i]}")}
+return result
 end
