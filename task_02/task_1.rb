@@ -17,4 +17,6 @@ def powers_of_two(n)
 
 end
   
-powers_of_two(0)
+powers_of_two(0) # [1]
+powers_of_two(1) # [1, 2]
+powers_of_two(4) # [1, 2, 4, 8, 16]
