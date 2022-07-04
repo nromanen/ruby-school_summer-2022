@@ -6,7 +6,7 @@ def square_sum(numbers)
       result += numbers**2
     end
 
-    p result
+    return result
 
   end
 
