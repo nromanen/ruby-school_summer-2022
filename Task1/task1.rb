@@ -20,10 +20,9 @@ end
 
 # finds index of special using "All elements, that not a (A-Z, 0-9 or spaces)"
 def check_specials(input_string)
-  input_string =~ /\W/
+  input_string =~ /[^\p{L}\p{N}]/
 end
 
 #results
 output = "REGEX indexes - #{check_numbers(input_string)}_#{check_capitals(input_string)}_#{check_regular(input_string)}_#{check_specials(input_string)}"
 print(output)
-
