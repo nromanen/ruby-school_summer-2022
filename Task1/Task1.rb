@@ -1,5 +1,5 @@
 text = ('abc1');
-symbols = ('####');
+symbols = ('Б####');
 
 def isUpperCase(str)
     str =~ /[A-Z]/
@@ -10,11 +10,11 @@ end
  def isDigit(str) 
     str =~ /\d/
 end
- def isSymbol(str)
-    str =~ /\W/ 
+ def isSpecialSymbol(str)
+    str =~ /[[:punct:]]/
  end
 def printRegex(str) 
-    print("#{isUpperCase(str)}_#{isLowerCase(str)}_#{isDigit(str)}_#{isSymbol(str)}")
+    print("#{isUpperCase(str)}_#{isLowerCase(str)}_#{isDigit(str)}_#{isSpecialSymbol(str)}")
     puts "\n"
 end 
 printRegex(text)
