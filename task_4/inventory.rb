@@ -1,13 +1,9 @@
 module Inventory
   def warehouse(array)
-    result = {}
+    result = Hash.new(0)
     array.each do |value|
       product, amount = value.split(/ *- */)
-      if result[:"#{product}"].nil?
-        result[:"#{product}"] = amount.to_i
-      else
-        result[:"#{product}"] += amount.to_i
-      end
+      result[product.to_sym] += amount.to_i
     end
     result
   end
