@@ -1,5 +1,5 @@
 require 'test/unit'
-require './inventory'
+require_relative 'inventory'
 
 
 class InventoryTest < Test::Unit::TestCase
@@ -16,4 +16,3 @@ class InventoryTest < Test::Unit::TestCase
     assert_equal({:one=>20, :two=>3}, warehouse(['one -18', 'two - 3', 'one-2']))
   end
 end
-

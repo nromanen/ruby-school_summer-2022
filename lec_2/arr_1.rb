@@ -9,9 +9,3 @@ def to_power(n)
 end
 
 to_power(2)
-
-
-
-
-
-
