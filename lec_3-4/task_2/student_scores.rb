@@ -10,9 +10,9 @@ def students_by_scores(max, low, up, students)
     if min_range.include?(e[1])
       scores[:bottom].push(e[0])
     elsif max_range.include?(e[1])
-      scores[:top].push(e[0]).sort
+      scores[:top].push(e[0])
     else
-      scores[:middle].push(e[0]).sort
+      scores[:middle].push(e[0])
     end
   end
   puts scores
