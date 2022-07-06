@@ -1,8 +1,10 @@
 def students_by_scores(max, low, up, students)
   min_range = 0 .. max * low / 100
   max_range = max - up .. max
-  scores = Hash[:top => [], :middle => [], :bottom => []]
-  split_scores = students.split(/[\s,']/).each_slice(2).to_a
+  scores = Hash[top: [], middle: [], bottom: []]
+  split_scores = students.split(/[\s,']/)
+                         .each_slice(2)
+                         .to_a
   split_scores.map { |student, score| [student, score.to_i]}
               .sort {|student, score| student[1] <=> score[1]}
               .reverse
