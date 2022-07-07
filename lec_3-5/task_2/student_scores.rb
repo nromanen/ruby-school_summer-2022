@@ -20,4 +20,4 @@ def students_by_scores(max, low, up, students)
 end
 
 students_by_scores(100, 15, 10,
-                   "S1,5\nS2,18\nS3,45\nS4,90\nS5,100\nS6,94\nS7,1\nS8,13\nA,100\nB,13\nC,18")
+                   "S1,5\nS2,18\nS3,45\nS4,90\nS5,100\nS6,94\nS7,1\nS8,13\nA,100\nB,13\nC,18\nS9,2")
