@@ -6,8 +6,7 @@ def students_by_scores(max, low, up, students)
                          .each_slice(2)
                          .to_a
   split_scores.map { |student, score| [student, score.to_i] }
-              .sort { |student, score| student[1] <=> score[1] }
-              .reverse
+              .sort { |student, score| score[1] <=> student[1] }
               .each {  |e|
                 if min_range.include?(e[1])
                   scores[:bottom].push(e[0])
@@ -21,4 +20,4 @@ def students_by_scores(max, low, up, students)
 end
 
 students_by_scores(100, 15, 10,
-                   "S1,5\nS2,18\nS3,45\nS4,90\nS5,100\nS6,94\nS7,1\nS8,13")
+                   "S1,5\nS2,18\nS3,45\nS4,90\nS5,100\nS6,94\nS7,1\nS8,13\nA,100\nB,13\nC,18")
