@@ -22,6 +22,6 @@ def merge(row)
   result
 end
 
-p merge([2,0,2,2])
-p merge([2,0,2,4])
-p merge([0,0,2,2])
+p merge([2,0,2,2]) #expected [4, 2, 0, 0]
+p merge([2,0,2,4]) #expected [4, 4, 0, 0]
+p merge([0,0,2,2]) #expected [4, 0, 0, 0]
