@@ -3,13 +3,10 @@ module Students
   MIN = 0
   UPPER_BOUND = 0.10
   LOWER_BOUND = 0.15
-  @top = {}
-  @middle = {}
-  @bottom = {}
 
-  def text_to_hash(txt='Наташа -18 Марія-12 Роман- 2', pattern = /(\p{Lu}\p{L}{1,10}|\p{Lu}\p{L}{1,10}-\p{Lu}\p{L}{1,14})( -|-|- | - )(\d{1,10})/)
+  def text_to_hash(txt='Наташа -18 Марія-12 Роман- 2', txt_pattern = /(\p{Lu}\p{L}{1,10}|\p{Lu}\p{L}{1,10}-\p{Lu}\p{L}{1,14})( -|-|- | - )(\d{1,10})/)
     hash = {}
-    txt.to_enum(:scan, pattern).map {Regexp.last_match}.each {|x|
+    txt.to_enum(:scan, txt_pattern).map {Regexp.last_match}.each {|x|
       hash.merge!(Hash[x[1].to_sym => x[3].to_i])
     }
     hash
@@ -21,15 +18,20 @@ module Students
     hash
   end
 
+  def sorting(hash = check_for_correctness)
+    hash.sort_by{|k, v| [-v, k]}
+  end
+
   def distribution(hash = check_for_correctness)
-    t = hash.select{|k,v|v>(MAX-(MAX*UPPER_BOUND))}
+    t = hash.select{|k,v|v>=(MAX-(MAX*UPPER_BOUND))}
     m = hash.select{|k,v|v<MAX-(MAX*UPPER_BOUND) and v > MAX*LOWER_BOUND}
-    b = hash.select{|k,v|v < MAX*LOWER_BOUND}
+    b = hash.select{|k,v|v <= MAX*LOWER_BOUND}
     [t,m,b]
   end
 
-  def sorting(hash = check_for_correctness)
-    hash.sort_by{|_key, value| value}.reverse_each.map{|e| e}.to_h
+  def process(txt,
+              txt_pattern = /(\p{Lu}\p{L}{1,10}|\p{Lu}\p{L}{1,10}-\p{Lu}\p{L}{1,14})( -|-|- | - )(\d{1,10})/,
+              name_pattern =  /^\p{Lu}\p{L}{1,14}(-(\p{Lu}\p{L}{1,14}$)|$)/)
+    distribution sorting check_for_correctness(text_to_hash(txt,txt_pattern),name_pattern)
   end
-
 end
