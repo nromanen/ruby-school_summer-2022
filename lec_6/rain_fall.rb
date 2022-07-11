@@ -38,10 +38,10 @@ def mean(town, strng)
   if rain_town == ""
     return -1
   end
-  values = rain_data.split(",")
-  values.each { |str|
-    temp2 = str.split(" ")
-    sum += temp2[1].to_f
+  rain_value = rain_data.split(",")
+  rain_value.each { |str|
+    temp = str.split(" ")
+    sum += temp[1].to_f
   }
   sum / 12.0
 end
@@ -62,10 +62,10 @@ def variance(town, strng)
     return -1
   end
   avg = mean(town, strng)
-  values = rain_data.split(",")
-  values.each { |str|
-    temp2 = str.split(" ")
-    sum += (temp2[1].to_f - avg.to_f)**2
+  rain_value = rain_data.split(",")
+  rain_value.each { |str|
+    temp = str.split(" ")
+    sum += (temp[1].to_f - avg.to_f)**2
   }
    sum / 12.0
 end
