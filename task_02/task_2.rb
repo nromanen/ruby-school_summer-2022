@@ -1,9 +1,10 @@
-def square_sum(numbers)
-    sum = 0
-        numbers.each do |num|
-            sum += num.pow(2)
-        end
-    return sum
-end
+def check_name(str)
+    puts "#{str} - #{str =~ /^\p{Lu}\p{Ll}{0,14}(-\p{Lu}\p{Ll}{0,14})?$/}"
+  end
   
-   puts square_sum([2,6,3])
+  check_name('Аааааааааааннннннннаааааааа')
+  check_name('І-Ф')
+  check_name('Нннннннн')
+  check_name('Анна7257527')
+  check_name('Анна-Марія')
+  check_name('Анна-марія')

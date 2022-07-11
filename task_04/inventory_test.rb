@@ -1,5 +1,5 @@
 require 'test/unit'
-require './inventory'
+require './task_04/inventory'
 
 
 class InventoryTest < Test::Unit::TestCase
