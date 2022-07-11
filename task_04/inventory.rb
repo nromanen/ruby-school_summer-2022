@@ -10,6 +10,6 @@ module Inventory
             res.store(val[0], val[1])
           end
         }
-    return res
+    return res 
   end
 end
