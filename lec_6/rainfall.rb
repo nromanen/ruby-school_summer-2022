@@ -70,9 +70,9 @@ def variance(town, strng)
    sum / 12.0
 end
 
-p mean("London", data)
-p mean("Sydney", data)
-p mean("sdshdsdsd", data)
-p variance("London", data)
-p variance("Sydney", data)
-p variance("asddsaasd", data)
+puts mean("London", data)
+puts mean("Sydney", data)
+puts mean("sdshdsdsd", data)
+puts variance("London", data)
+puts variance("Sydney", data)
+puts variance("asddsaasd", data)
