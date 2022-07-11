@@ -1,8 +1,6 @@
 def merge(arr)
-
   start_i = 0
   end_i = 1
-
   while end_i < arr.length do
     if arr[start_i] == arr[end_i]
       arr[start_i] = arr[start_i] + arr[end_i]
