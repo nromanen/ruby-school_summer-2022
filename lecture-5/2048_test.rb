@@ -3,7 +3,7 @@ require 'test/unit'
 require './lecture-5/2048'
 
 
-class Students_test < Test::Unit::TestCase
+class Game2048_test < Test::Unit::TestCase
   include Game2048
 
   def test_power_of_two
