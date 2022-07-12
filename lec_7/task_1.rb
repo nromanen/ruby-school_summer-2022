@@ -8,10 +8,10 @@ def sum(arr)
   puts sum
 end
 
-sum([4, 0, -12]) {  |e|
+sum([4, 0, -12]) do |e|
   if e < 0
     e**2
   else
     e
   end
-}
+end
