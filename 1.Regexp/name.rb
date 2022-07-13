@@ -1,22 +1,22 @@
+Rules = [:name?, :doublename?]
 def name?(name)
-    name =~ /^\p{Upper}{1}\p{Lower}{0,14}$/
+    name =~ /^\p{Upper}{1}\p{Lower}{0,14}$/ ? true : false
 end 
 
 def doublename?(name)
     i = name =~ /\-/
-    name?(name[0...i]) and name?(name[i+1..-1]) if name =~ /\-/
+    name?(name[0...i]) and name?(name[i+1..-1]) if name =~ /\-/ ? true : false
 end 
 
-def validation(name, rules) 
-    rules.each{|x|  return name if method(x).call(name)}
+def validate(name) 
+    Rules.each{|rule|  return name if method(rule).call(name)}
     nil
 end
 
-def name_validator(names, rules)
-    names.map { |name| validation(name, rules)}.compact
+def name_validator(names)
+    names.map { |name| validate(name)}.compact
 end
 
-rules = [:name?, :doublename?]
 names = [
     "Анна",
     "Анна2",
@@ -25,5 +25,5 @@ names = [
     "Забагатосимволів",
     "І-Ф"
 ]
-#validation("Анна-Марія2", rules) 
-p name_validator(names,rules)
+p name_validator(names)
+
