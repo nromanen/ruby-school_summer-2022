@@ -17,6 +17,9 @@ class Student
     unless mark.instance_of? Mark
       return
     end
+    if exists?(mark.subject)
+      raise "New mark for an existing subject cannot be assigned"
+    end
     @marks.push(mark)
   end
 

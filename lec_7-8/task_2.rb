@@ -1,7 +1,5 @@
 def check_password(user, password)
-  Proc.new do |u, p|
-    u == user && p == password
-  end
+  Proc.new { |u, p| u == user && p == password }
 end
 
 admin = check_password("admin", "123")
