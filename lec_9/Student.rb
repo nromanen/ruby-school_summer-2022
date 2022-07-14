@@ -5,8 +5,6 @@ class Student
   def initialize(name)
     @name = name
     @marks = Array.new
-
-    @marks_instance = Mark.new("","")
   end
 
   def exists?(subject_title)
@@ -19,13 +17,6 @@ class Student
     unless mark.instance_of? Mark
       return
     end
-
-    if exists?(mark.subject)
-      @marks.reject! { |e|
-        e.subject == mark.subject
-      }
-    end
-
     @marks.push(mark)
   end
 
