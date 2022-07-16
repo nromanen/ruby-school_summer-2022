@@ -18,9 +18,10 @@ class Student
       return
     end
     if exists?(mark.subject)
-      raise "New mark for an existing subject cannot be assigned"
+      nil
+    else
+      @marks.push(mark)
     end
-    @marks.push(mark)
   end
 
   def to_s
