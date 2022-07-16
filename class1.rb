@@ -5,7 +5,7 @@ class Mark
             @value=value
         end
         def to_s()
-            "#{subject}:  #{value}  "
+            "#{subject} : #{value}"
         end
 end
 class Student
@@ -29,9 +29,9 @@ class Student
         end
     end
     def to_s()
-        result="#{name}:  "
+        result="#{name}, marks: ["
         marks.each{|el|  result=result+el.to_s}
-        result
+        "#{result}]"
     end
 end
 
