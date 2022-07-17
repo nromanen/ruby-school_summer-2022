@@ -11,3 +11,5 @@ Task 3 - arrays (from codewars)
 Task 4 - hash (inventory)
 
 Task 5 - hash (students)
+
+Task 6 - conditional statements
