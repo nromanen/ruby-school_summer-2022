@@ -1,9 +1,9 @@
-def sqInRect length, width
+def sqInRect(length, width)
   return nil if length == width
 
   result = []
 
-  until length * width == 0
+  until (length * width).zero?
     length, width = [length, width].sort
     result.push length
     width -= length

@@ -13,3 +13,5 @@ Task 4 - hash (inventory)
 Task 5 - hash (students)
 
 Task 6 - conditional statements
+
+Task 7 - methods

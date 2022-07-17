@@ -42,12 +42,13 @@ describe 'Categorize' do
   it 'should convert the string into a hash and categorize the value into 3 groups' do
     text = "Tanya, 97\nDina, 97\nMary, 86\nMax, 67\nAndry, 70\nTom, 10\nLary, 10"
     result = categorize_students(100, 15, 15, text)
-    expected = { top: ['Dina', 'Tanya', 'Mary'], middle: ['Andry', 'Max'], low: ['Lary', 'Tom'] }
+    expected = { top: %w[Dina Tanya Mary], middle: %w[Andry Max], low: %w[Lary Tom] }
     expect(result).to eql(expected)
     text = "Mary, 100\nTonny, 100\nOlga, 90\nSonia, 74\nDasha, 90\nNataly, 65\nMaria,24\n" \
-      "Tanya, 30\nLisa, 8\nJohn, 12\nAlex, 12\nDavid, 74\nAnna, 100"
+           "Tanya, 30\nLisa, 8\nJohn, 12\nAlex, 12\nDavid, 74\nAnna, 100"
     result = categorize_students(100, 15, 10, text)
-    expected = { top: ['Anna', 'Mary', 'Tonny', 'Dasha', 'Olga'], middle: ['David', 'Sonia', 'Nataly', 'Tanya', 'Maria'], low: ['Alex', 'John', 'Lisa'] }
+    expected = { top: %w[Anna Mary Tonny Dasha Olga],
+                 middle: %w[David Sonia Nataly Tanya Maria], low: %w[Alex John Lisa] }
     expect(result).to eql(expected)
   end
 end
