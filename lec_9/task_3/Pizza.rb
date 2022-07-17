@@ -13,7 +13,7 @@ class Pizza
       @@order_count += 1
       @number = @@order_count
     else
-      @@fail_count+=1
+      @@fail_count += 1
     end
   end
 
