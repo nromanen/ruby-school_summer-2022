@@ -1,0 +1,5 @@
+class Mark
+  attr_accessor subject: untyped
+
+  attr_accessor value: untyped
+end
