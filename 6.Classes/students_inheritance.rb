@@ -47,3 +47,23 @@ marks = [
 Peter = Student.new("Peter")
 marks.each{|mark| Peter.add_mark!(mark)}
 p Peter.to_s
+
+class StudentImproved < Student
+    attr_reader :name
+    attr_accessor :marks
+    def index_of(subject_title)
+        marks.each_with_index{|mark, index| return index if subject_title == mark.subject}
+        -1
+       end
+    def add_mark!(new_mark)
+    if exists?(new_mark.subject)
+        marks[index_of(new_mark.subject)].val = new_mark.val
+    else
+        marks.append(new_mark)
+    end
+   end
+end
+
+John = StudentImproved.new("John")
+marks.each{|mark| John.add_mark!(mark)}
+p John.to_s
