@@ -1,7 +1,9 @@
-def sum
-
-    [4, 0, -12].map{|el| yield(el)}.sum
-
+def check_pass(name, pass)
+    lambda =-> (n,p){n.eql?(name) && p.eql?(pass)}
 end
 
-  puts sum{|el| el > 0? el : el**2}
+admin = check_pass("lenovo", "lenovo")
+
+puts admin.call("lenovo", "lenovo") 
+puts admin.call("lenovo")
+puts admin.call("asus", "asus") 
