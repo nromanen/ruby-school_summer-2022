@@ -1,6 +1,5 @@
 class Student
-  attr_accessor :name
-  attr_accessor :marks
+  attr_accessor :name, :marks
 
   def initialize(name)
     @name = name

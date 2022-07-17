@@ -1,7 +1,7 @@
 require_relative 'mark'
 require_relative 'student'
 
-mark1 = Mark.new('JavaScript',4)
+mark1 = Mark.new('JavaScript', 4)
 mark2 = Mark.new('Java', 4)
 mark3 = Mark.new('English', 5)
 mark4 = Mark.new('English', 2)
