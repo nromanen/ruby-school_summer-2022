@@ -1,7 +1,6 @@
 require_relative '../task_1/student'
 
 class RetakeStudent < Student
-
   def add_mark(mark)
     return unless mark.instance_of? Mark
 
