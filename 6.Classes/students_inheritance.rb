@@ -32,22 +32,6 @@ class Student
    end
 end
 
-marks = [
-    c = Mark.new("C", 5),
-    cpp = Mark.new("C++", 5),
-    cs = Mark.new("C#", 5),
-    java = Mark.new("Java", 5),
-    python = Mark.new("Python", 5),
-    php = Mark.new("PHP", 5),
-    go = Mark.new("GO", 5),
-    js = Mark.new("JS", 5),
-    js2 = Mark.new("JS", 4)
-]
-
-Peter = Student.new("Peter")
-marks.each{|mark| Peter.add_mark!(mark)}
-p Peter.to_s
-
 class StudentImproved < Student
     attr_reader :name
     attr_accessor :marks
@@ -63,6 +47,22 @@ class StudentImproved < Student
     end
    end
 end
+
+marks = [
+    c = Mark.new("C", 5),
+    cpp = Mark.new("C++", 5),
+    cs = Mark.new("C#", 5),
+    java = Mark.new("Java", 5),
+    python = Mark.new("Python", 5),
+    php = Mark.new("PHP", 5),
+    go = Mark.new("GO", 5),
+    js = Mark.new("JS", 5),
+    js2 = Mark.new("JS", 4)
+]
+
+Peter = Student.new("Peter")
+marks.each{|mark| Peter.add_mark!(mark)}
+p Peter.to_s
 
 John = StudentImproved.new("John")
 marks.each{|mark| John.add_mark!(mark)}
