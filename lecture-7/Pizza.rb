@@ -4,12 +4,12 @@ class Pizza
   attr_reader :d, :ingredients, :number
   @@count = Count.new
 
-  def initialize(n, d, ingredients)
+  def initialize(d, ingredients)
     if d == 25 || d == 50
       @@count.increment_total
       @d = d
       @ingredients = ingredients
-      @number = n
+      @number = @@count.total
     else
       @@count.increment_failure
       @d = 0
@@ -18,10 +18,10 @@ class Pizza
     end
   end
 
-  def failInstance
+  def self.failInstance
     @@count.failure
   end
-  def totalInstance
+  def self.totalInstance
     @@count.total
   end
 

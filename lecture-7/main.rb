@@ -17,10 +17,8 @@ p rs
 rs.add_mark(Mark.new('C++', 6))
 p rs
 
-pizza = Pizza.new(1, 24, [])
-p pizza
-
-pizza2 = Pizza.new(2, 25, [])
-p pizza2
-p pizza.failInstance
-p pizza2.totalInstance
+pizza1 = Pizza.new(10, ['mushroom', 'cheese'])
+pizza2 = Pizza.new 25, ['mushroom', 'cheese', 'cherry']
+pizza3 = Pizza.new 50, ['mushroom']
+pizza4 = Pizza.new 100, ['mushroom', 'cheese', 'cherry']
+puts Pizza.failInstance
