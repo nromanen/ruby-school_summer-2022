@@ -1,7 +1,12 @@
 require './lecture-7/Mark'
 
 class Student
+
+  protected
+
   attr_reader :marks, :name
+
+  public
 
   def initialize(name, marks = [])
     @name = name
