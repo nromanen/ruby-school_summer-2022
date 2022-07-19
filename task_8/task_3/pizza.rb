@@ -22,7 +22,6 @@ class Pizza
   end
 
   def to_s
-    "#{@number} : diagonal - #{diagonal}, ingredients - #{ingredients.to_s}"
+    "#{@number} : diagonal - #{diagonal}, ingredients - #{ingredients}"
   end
 end
-
