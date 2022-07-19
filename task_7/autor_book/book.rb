@@ -3,8 +3,6 @@ require_relative 'author.rb'
 class Book
     attr_accessor :authors
   
-    CURRENT_YEAR = Time.now.year
-  
     def initialize(name, edition, year)
       if !year_valid?(year) || !str_valid?(name) || !str_valid?(edition)
         init_default_values
@@ -25,9 +23,13 @@ class Book
   
       @authors.push(author)
     end
-  
+
+    def str_valid?(str)
+      /^[\d\p{P}\p{Lu}\p{Ll} ]+$/.match?(str)
+    end
+
     def to_s
-      "-----Book-----\n" +
+      "-----Книжки-----\n" +
         "Name: #{@name}\n" +
         "Edition: #{@edition}\n" +
         "Year: #{@year}\n" +
@@ -40,14 +42,10 @@ class Book
     private
   
     def year_valid?(year)
-      year.to_s.length == 4 && year <= CURRENT_YEAR
+      year.to_s.length == 4 && year <= Time.now.year
     end
   
-    def str_valid?(str)
-      /^[\d\p{P}\p{Lu}\p{Ll} ]+$/.match?(str)
-    end
-  
-    def author_present?(object)
+     def author_present?(object)
       @authors.any? do |author|
         author.first_name.eql?(object.first_name) &&
           author.surname.eql?(object.surname) &&
@@ -55,10 +53,12 @@ class Book
         end
     end
   
-    def init_default_values
+   def init_default_values
       @year = nil
       @edition = nil
       @authors = nil
       @name = nil
     end
+  
+    
   end
