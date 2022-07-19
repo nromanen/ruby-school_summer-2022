@@ -2,6 +2,8 @@ require './lecture-7/Mark'
 require './lecture-7/Student'
 require './lecture-7/RetakeStudent'
 require './lecture-7/Pizza'
+require './lecture-7/Author'
+require './lecture-7/Book'
 
 mark = Mark.new('C++', 5)
 puts mark.to_s
@@ -22,3 +24,11 @@ pizza2 = Pizza.new 25, ['mushroom', 'cheese', 'cherry']
 pizza3 = Pizza.new 50, ['mushroom']
 pizza4 = Pizza.new 100, ['mushroom', 'cheese', 'cherry']
 puts Pizza.failInstance
+
+author1 = Author.new("Mish", "Devil")
+author2 = Author.new("Misha", "Devil")
+p author1
+p author2
+
+b = Book.new("Sdw", [author1, author2], "Sfwq", "1234")
+p b
