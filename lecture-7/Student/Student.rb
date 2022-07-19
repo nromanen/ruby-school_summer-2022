@@ -1,4 +1,4 @@
-require './lecture-7/Mark'
+require './lecture-7/Student/Mark'
 
 class Student
 

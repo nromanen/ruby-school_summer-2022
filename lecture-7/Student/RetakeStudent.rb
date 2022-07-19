@@ -1,4 +1,4 @@
-require './lecture-7/Mark'
+require './lecture-7/Student/Mark'
 
 class RetakeStudent < Student
   def add_mark(mark)

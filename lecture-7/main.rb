@@ -1,9 +1,9 @@
-require './lecture-7/Mark'
-require './lecture-7/Student'
-require './lecture-7/RetakeStudent'
-require './lecture-7/Pizza'
-require './lecture-7/Author'
-require './lecture-7/Book'
+require './lecture-7/Student/Mark'
+require './lecture-7/Student/Student'
+require './lecture-7/Student/RetakeStudent'
+require './lecture-7/Pizza/Pizza'
+require './lecture-7/Book_author/Author'
+require './lecture-7/Book_author/Book'
 
 mark = Mark.new('C++', 5)
 puts mark.to_s

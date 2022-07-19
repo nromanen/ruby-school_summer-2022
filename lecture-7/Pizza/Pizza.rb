@@ -1,4 +1,4 @@
-require './lecture-7/Count'
+require './lecture-7/Pizza/Count'
 
 class Pizza
   attr_reader :d, :ingredients, :number
