@@ -1,18 +1,18 @@
 class Pizza
-  class_variable_set(:@@count, 0)
-  class_variable_set(:@@fails, 0)
   attr_accessor :diagonal, :ingredients, :number
 
-  def initialize(d, ingredients)
-    unless [25, 50].include? d
+  @@count = 0
+  @@fails = 0
+
+  def initialize(diagonal, ingredients)
+    unless [25, 50].include? diagonal
       @@fails += 1
-      @diagonal = 0
+      @diagonal, @number = 0
       @ingredients = []
-      @number = 0
       return
     end
     @@count += 1
-    @diagonal = d
+    @diagonal = diagonal
     @ingredients = ingredients
     @number = @@count
   end
@@ -22,6 +22,6 @@ class Pizza
   end
 
   def to_s
-    "#{@number} : diagonal - #{diagonal}, ingredients - #{ingredients}"
+    "#{@number || 0} : diagonal - #{diagonal}, ingredients - #{ingredients}"
   end
 end
