@@ -1,4 +1,4 @@
-def sqInRect(length, width)
+def sq_in_rect(length, width)
   return nil if length == width
 
   result = []
