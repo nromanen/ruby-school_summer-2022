@@ -1,7 +1,7 @@
 module ConsoleInput
   def self.string
     print "Enter any string:\n"
-    gets.chomp
+    gets.chomp.to_s
   end
 
   def self.number
