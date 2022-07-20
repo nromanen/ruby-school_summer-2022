@@ -41,7 +41,3 @@ end
 variable
 end
 end
-puts ConsoleInput.char
-puts ConsoleInput.string
-puts ConsoleInput.hash
-puts ConsoleInput.num
