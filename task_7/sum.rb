@@ -3,7 +3,5 @@ def sum(arr)
   arr.each do |el|
     sum += yield(el)
   end
-  puts sum
+  sum
 end
-
-sum([4, 0, -12]) { |e| e.negative? ? e**2 : e }
