@@ -1,6 +1,11 @@
 require_relative 'console_input.rb'
 
-puts ConsoleInput.string
-puts ConsoleInput.number
-puts ConsoleInput.symbol
-puts ConsoleInput.new_hash
+class Task
+  include ConsoleInput
+end
+
+task = Task.new
+puts task.string
+puts task.number
+puts task.symbol
+puts task.new_hash
