@@ -1,5 +1,5 @@
-require_relative '../../../task_8/task_1/mark'
-require_relative '../../../task_8/task_1/student'
+require_relative '../../task_8/task_1/mark'
+require_relative '../../task_8/task_1/student'
 
 describe 'Marks and students - exist' do
   it 'should check if mark exist for student' do
