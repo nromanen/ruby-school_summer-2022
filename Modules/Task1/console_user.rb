@@ -1,6 +1,6 @@
 require_relative 'console_input.rb'
 
-class User
+class ConsoleUser
   attr_reader :cache
 
   include ConsoleInput

@@ -1,6 +1,6 @@
-require_relative 'user.rb'
+require_relative 'console_user.rb'
 
-user = User.new("Nazar Palijchuk")
+user = ConsoleUser.new("Nazar Palijchuk")
 
 puts user.input_number
 puts user.input_str
