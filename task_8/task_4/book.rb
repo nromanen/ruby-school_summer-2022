@@ -16,8 +16,7 @@ class Book
   end
 
   def valid?(name, authors, edition, year)
-    return false unless name =~ /[\p{Alnum}\-.,;]+/
-    return false unless edition =~ /[\p{Alnum}\-.,;]+/
+    return false unless name =~ /[\p{Alnum}\-.,;]+/ && edition =~ /[\p{Alnum}\-.,;]+/
     return false if year < 1000 || year > 2022
 
     (0...authors.size).each do |i|

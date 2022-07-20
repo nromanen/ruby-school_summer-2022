@@ -4,19 +4,16 @@ class Author
   @@all_authors = []
 
   def initialize(name, surname, patronymic)
-    if valid_all(name, surname, patronymic)
-      @name = name
-      @surname = surname
-      @patronymic = patronymic
-      @@all_authors.push(self) unless author_in_db?(name, surname, patronymic)
-    end
+    @name = name
+    @surname = surname
+    @patronymic = patronymic
+    @@all_authors.push(self) if valid_all(name, surname, patronymic) && !author_in_db?(name, surname, patronymic)
   end
 
   def valid?(value)
     return false if value.length > 15
 
     index = value =~ /^(\p{Upper}\p{Lower}*)(-\p{Upper}\p{Lower}+)?$/
-
     index != nil
   end
 
