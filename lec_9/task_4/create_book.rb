@@ -1,5 +1,5 @@
-require_relative 'Author.rb'
-require_relative 'Book.rb'
+require_relative 'author.rb'
+require_relative 'book.rb'
 
 auth1 = Author.add_author("John", "Tolkien", "RR")
 auth1_2 = Author.add_author("John", "Tolkien", "RR")

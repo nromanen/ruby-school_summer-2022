@@ -1,4 +1,4 @@
-require_relative 'Pizza.rb'
+require_relative 'pizza.rb'
 
 pizza1 = Pizza.new(10, ['mushroom', 'cheese'])
 pizza2 = Pizza.new(25, ['mushroom', 'cheese', 'cherry'])

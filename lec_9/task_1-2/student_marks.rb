@@ -1,6 +1,6 @@
-require_relative 'Mark.rb'
-require_relative 'Student.rb'
-require_relative 'RetakeStudent.rb'
+require_relative 'mark.rb'
+require_relative 'student.rb'
+require_relative 'retake_student.rb'
 
 mark1 = Mark.new('C++', 5)
 mark2 = Mark.new('C+++', 5)
