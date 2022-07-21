@@ -12,7 +12,7 @@ class User
 
   def phone=(phone)
     begin
-      if !phone_valid?(phone)
+      unless phone_valid?(phone)
         raise PhoneFormatException.new(phone)
       end
       @phone = phone

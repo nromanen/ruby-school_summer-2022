@@ -9,7 +9,6 @@ def third_order(max)
       puts "Good job!"
     else
       try += 1
-      raise "Wrong answer"
     end
   rescue
     if try > 3
