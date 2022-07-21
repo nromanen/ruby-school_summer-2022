@@ -33,7 +33,7 @@ module ConsoleInput
       elsif res.valid_int?
         res.to_i
       else
-        raise ArgumentError.new("Error when entering data")
+        raise ArgumentError.new("Error when entering data; should be float (x.xx) or int (x)")
       end
     rescue Exception => e
       print "#{e.message} -> #{res}"
@@ -50,7 +50,7 @@ module ConsoleInput
     str = gets.chomp
     begin
       unless str.include?('=>') || str.include?(':')
-        raise ArgumentError.new("Error when entering data")
+        raise ArgumentError.new("Error when entering data; required format is 'key: value' or 'key => value'")
       end
       hash_str = str.scan(/\w+/).each_slice(2).to_h
     rescue Exception => e
