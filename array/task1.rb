@@ -5,7 +5,7 @@ def pow_of_2(n)
   end
   return "#{arr}"
 end
-
+#####################################################################
 puts "Enter n:"
 n = gets.to_i
 puts pow_of_2(n)

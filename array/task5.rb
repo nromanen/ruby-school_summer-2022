@@ -5,7 +5,7 @@ def test_123(str)
   end
   return res
 end
-
+#####################################################################
 s = []
 puts "Enter list of strings\n"
 for i in 0..255

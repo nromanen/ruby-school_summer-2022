@@ -5,7 +5,7 @@ def square_n_sum(arr)
   end
   return sum
 end
-
+#####################################################################
 puts "Enter n:"
 n = gets.to_i
 arr = []

@@ -8,7 +8,7 @@ def root_or_square(arr)
   end
   puts arr
 end
-
+#####################################################################
 puts "Enter size of array:\n"
 n = gets.to_i
 puts "Enter array:\n"

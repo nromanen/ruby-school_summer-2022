@@ -1,6 +1,7 @@
 def say_hello(person,city,state)
     puts "Hello, #{person.join(" ")}! Welcome to #{city}, #{state}!\n"
 end
+#####################################################################
 puts "Enter your name, city and state:\n"
 per = []
 for i in 0..2
