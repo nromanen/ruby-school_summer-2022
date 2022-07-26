@@ -14,7 +14,7 @@ module Game2048
           w_row[j] = 0
           i = j+1
         elsif w_row[j] != 0
-          i = i+1
+          break
         end
       }
     }
