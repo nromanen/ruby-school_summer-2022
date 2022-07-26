@@ -10,7 +10,7 @@ module Inventory
   private
 
   def format_line(line, rez)
-    matches = line.match(/([^ -]{1,10})( -|-|- | - )(\d{1,10})/)
+    matches = line.match(/([^ -]{1,10})( *- *)(\d{1,10})/)
     key = matches[1].to_sym
     value = matches[3].to_i
 
