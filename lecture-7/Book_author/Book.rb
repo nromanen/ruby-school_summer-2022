@@ -24,15 +24,4 @@ class Book
       @issued = issued
     end
   end
-
-  def exists?(name, surname)
-    ex = false
-    @@authors.each { |el|
-      if el.name == name && el.surname == surname
-        ex = true
-        break
-      end
-    }
-    ex
-  end
 end
