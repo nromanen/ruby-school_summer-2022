@@ -1,5 +1,5 @@
 require 'test/unit'
-require './inventory'
+require './hashes/inventory'
 
 
 class InventoryTest < Test::Unit::TestCase
@@ -9,11 +9,11 @@ class InventoryTest < Test::Unit::TestCase
   end
 
   def test_unique
-    assert_equal({:one=>18, :two=>3}, warehouse(['one -18', 'two - 3']))
+    assert_equal({:one=>18, :two=>3}, warehouse(['one - 18', 'two - 3']))
   end
 
   def test_duplicate
-    assert_equal({:one=>20, :two=>3}, warehouse(['one -18', 'two - 3', 'one-2']))
+    assert_equal({:one=>20, :two=>3}, warehouse(['one - 18', 'two - 3', 'one - 2']))
   end
 end
 
