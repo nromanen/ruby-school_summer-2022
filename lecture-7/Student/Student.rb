@@ -14,14 +14,12 @@ class Student
   end
 
   def exists?(subject_title)
-    ex = false
     @marks.each { |el|
       if el.subject == subject_title
-        ex = true
-        break
+        return true
       end
     }
-    ex
+    false
   end
 
   def add_mark(mark)
