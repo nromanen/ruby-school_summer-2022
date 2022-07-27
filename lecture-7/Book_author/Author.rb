@@ -6,7 +6,7 @@ class Author
   @@pattern = /^\p{Lu}\p{Ll}{1,14}$/
 
   def initialize(name, surname, patronymic ="")
-    unless name.match(@@pattern_name) == nil || surname.match(@@pattern) == nil
+    if name.match(@@pattern_name) != nil && surname.match(@@pattern) != nil
       unless exists?(name, surname)
         @name = name
         @surname = surname
@@ -16,14 +16,14 @@ class Author
     end
   end
 
+  def eql?(name, surname)
+    self.name == name && self.surname == surname
+  end
+
   def exists?(name, surname)
-    ex = false
     @@authors.each { |el|
-      if el.name == name && el.surname == surname
-        ex = true
-        break
-      end
+      return true if el.eql? name,surname
     }
-    ex
+    false
   end
 end
