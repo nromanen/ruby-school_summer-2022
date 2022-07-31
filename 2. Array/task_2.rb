@@ -8,7 +8,7 @@ def square_sum(numbers)
 
     return result
 
-  end
+end
 
 square_sum([1, 2]) # 5
 square_sum([0, 3, 4, 5]) # 50

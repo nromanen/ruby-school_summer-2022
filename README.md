@@ -1,7 +1,14 @@
 ## Ruby school 2022
 #### Tasks list
-- **Taks_00** - Hello World
-- **Task_01** - regex
-- **Task_02** - Arrays
-- **Task_03** - Hash - Invertory
-- **Task_04** - Hash - Students
+- **0. Hello World**
+- **1. Regex**
+- **2. Array**
+- **3. Hash**
+- **4. Conditional statements**
+- **5. Methods**
+
+<!--
+- **Task_07** - Classes
+- **Task_08** - Modules
+- **Task_09** - Exceptions
+-->
